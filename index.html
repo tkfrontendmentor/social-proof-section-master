@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Social proof section</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+        :root {
+            ---dark-magenta: hsl(300, 43%, 22%);
+            ---soft-pink: hsl(333, 80%, 67%);
+
+            ---dark-grayish-magenta: hsl(303, 10%, 53%);
+            ---light-grayish-magenta: hsl(300, 24%, 96%);
+            ---white: hsl(0, 0%, 100%);
+        }
+
+        body {
+          box-sizing: border-box;
+          font-family: 'League Spartan', sans-serif;
+          color: var(---dark-magenta);
+        }
+
+        .container {
+          margin: 70px 0;
+          max-width: 1440px;
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          grid-gap: 1rem;
+        }
+
+        /* Ratings */
+        .ratings {
+          margin-left: 40px;
+          display: grid;
+          grid-template-columns: 1fr;
+          font-weight: 700;
+          height: 300px;
+        }
+
+        .rating {
+          width: 600px;
+          height: 30px;
+          background-color: var(---light-grayish-magenta);
+          padding: 20px;
+          border-radius: 10px;
+        }
+
+
+        #guru {
+          margin-left: 20px;
+        }
+
+        #tech {
+          margin-left: 40px;
+        }
+
+
+        /* Summary */
+        .summary h1 {
+          font-size: 64px;
+          margin-top: 0;
+        }
+
+        /* Customers */
+        .customers {
+          margin-top: 50px;
+          grid-column: 1 / span 2;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .customerCard {
+          margin: 0 15px;
+          background-color: var(---dark-magenta);
+          padding: 20px;
+          color: var(---white);
+          width: 1fr;
+          height: 300px;
+          border-radius: 10px;
+        }
+
+        .customerCard img {
+          border-radius: 50%;
+        }
+
+        .customerName {
+          display: flex;
+          align-items: center;
+        }
+        .name {
+          margin-left: 10px;
+          display: flex;
+          flex-direction: column;
+        }
+        .customerName span {
+            color: var(---soft-pink)
+        }
+
+        #irene {
+          margin-top: 20px;
+        }
+
+        #anne {
+          margin-top: 40px;
+        }
+
+
+
+        @media (max-width: 375px) {
+
+          .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 375px;
+          }
+
+
+          /* Ratings */
+          .ratings {
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-weight: 700;
+            height: 250px;
+          }
+
+          #guru {
+            margin-left: 0;
+          }
+
+          #tech {
+            margin-left: 0;
+          }
+
+          .rating {
+            width: 310px;
+            height: 30px;
+            background-color: var(---light-grayish-magenta);
+            padding: 20px;
+            border-radius: 10px;
+          }
+
+          /* Customers */
+          .customers {
+            margin-top: 50px;
+            grid-column: 1 / span 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+
+          .customerCard {
+            margin: 15px 15px;
+            background-color: var(---dark-magenta);
+            padding: 20px;
+            color: var(---white);
+            width: 1fr;
+            height: 200px;
+            border-radius: 10px;
+          }
+
+          .customerCard img {
+            border-radius: 50%;
+          }
+
+          .customerName {
+            display: flex;
+            align-items: center;
+          }
+          .name {
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+          }
+          .customerName span {
+            color: var(---soft-pink)
+          }
+
+          #irene {
+            margin-top: 0;
+          }
+
+          #anne {
+            margin-top: 0;
+          }
+
+        }
+    /* Best practice for vertical centering other than using margin-top */
+    /* Is there a better way to layout the elements than what I did? I started out with using grid layout and flex, then adjusted each element with margin properties*/
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+  <div class="summary">
+    <h1>10,000+ of our users love our products.</h1>
+    We only provide great products combined with excellent customer service.
+    See what our satisfied customers are saying about our services.
+  </div>
+  <div class="ratings">
+    <div id="reviews" class="rating">
+      <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z"
+              fill="#EF9546" fill-rule="nonzero"/>
+      </svg>
+      <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z"
+              fill="#EF9546" fill-rule="nonzero"/>
+      </svg>
+      <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z"
+              fill="#EF9546" fill-rule="nonzero"/>
+      </svg>
+      <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z"
+              fill="#EF9546" fill-rule="nonzero"/>
+      </svg>
+      <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z"
+              fill="#EF9546" fill-rule="nonzero"/>
+      </svg>
+      Rated 5 Stars in Reviews
+    </div>
+    <div id="guru" class="rating">
+      <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z"
+              fill="#EF9546" fill-rule="nonzero"/>
+      </svg>
+      <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z"
+              fill="#EF9546" fill-rule="nonzero"/>
+      </svg>
+      <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z"
+              fill="#EF9546" fill-rule="nonzero"/>
+      </svg>
+      <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z"
+              fill="#EF9546" fill-rule="nonzero"/>
+      </svg>
+      <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z"
+              fill="#EF9546" fill-rule="nonzero"/>
+      </svg>
+      Rated 5 Stars in Report Guru
+    </div>
+    <div id="tech" class="rating">
+      <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z"
+              fill="#EF9546" fill-rule="nonzero"/>
+      </svg>
+      <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z"
+              fill="#EF9546" fill-rule="nonzero"/>
+      </svg>
+      <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z"
+              fill="#EF9546" fill-rule="nonzero"/>
+      </svg>
+      <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z"
+              fill="#EF9546" fill-rule="nonzero"/>
+      </svg>
+      <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z"
+              fill="#EF9546" fill-rule="nonzero"/>
+      </svg>
+      Rated 5 Stars in BestTech
+    </div>
+  </div>
+  <div class="customers">
+    <div class="customerCard">
+      <div class="customerName">
+        <img src="images/image-colton.jpg" alt="">
+        <div class="name">
+          Colton Smith
+          <span>Verified Buyer</span>
+        </div>
+      </div>
+      <p>"We needed the same printed design as the one we had ordered a week prior.
+        Not only did they find the original order, but we also received it in time.
+        Excellent!"</p>
+    </div>
+    <div class="customerCard" id="irene">
+      <div class="customerName">
+        <img src="images/image-irene.jpg" alt="">
+        <div class="name">
+          Irene Roberts
+          <span>Verified Buyer</span>
+        </div>
+      </div>
+      <p>"Customer service is always excellent and very quick turn around. Completely
+        delighted with the simplicity of the purchase and the speed of delivery."</p>
+    </div>
+    <div class="customerCard" id="anne">
+      <div class="customerName">
+        <img src="images/image-anne.jpg" alt="">
+        <div class="name">
+          Anne Wallace
+          <span>Verified Buyer</span>
+        </div>
+      </div>
+      <p>"Put an order with this company and can only praise them for the very high
+        standard. Will definitely use them again and recommend them to everyone!"</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
